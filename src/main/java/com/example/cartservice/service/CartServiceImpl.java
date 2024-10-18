@@ -17,7 +17,7 @@ public class CartServiceImpl implements CartService {
     private CartRepository cartRepository;
 
     private CartDTO mapToCartDTO(Cart cart) {
-        return new CartDTO(cart.getId(), cart.getUserId(), null); // Assuming no items
+        return new CartDTO(cart.getId(), cart.getUserId(), cart.getProductIds());
     }
 
     private Cart mapToCart(CartDTO cartDTO) {
