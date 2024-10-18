@@ -5,13 +5,13 @@ import java.util.List;
 public class CartDTO {
     private Long id;
     private Long userId;
-    private List<CartItemDTO> items;
+    private List<Long> productIds; // Assuming you want to keep track of product IDs directly
 
     // Constructor
-    public CartDTO(Long id, Long userId, List<CartItemDTO> items) {
+    public CartDTO(Long id, Long userId, List<Long> productIds) {
         this.id = id;
         this.userId = userId;
-        this.items = items;
+        this.productIds = productIds;
     }
 
     // Getters and setters
@@ -31,11 +31,11 @@ public class CartDTO {
         this.userId = userId;
     }
 
-    public List<CartItemDTO> getItems() {
-        return items;
+    public List<Long> getProductIds() {
+        return productIds;
     }
 
-    public void setItems(List<CartItemDTO> items) {
-        this.items = items;
+    public void setProductIds(List<Long> productIds) {
+        this.productIds = productIds;
     }
 }
